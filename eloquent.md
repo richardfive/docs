@@ -280,6 +280,11 @@ Scopes allow you to easily re-use query logic in your models. To define a scope,
 **Utilizing A Query Scope**
 
 	$users = User::popular()->orderBy('created_at')->get();
+	
+For reversing the order of the orderBy sorting use 'asc' or 'desc' as the second argument to Orderby like:
+
+	$users = User::popular()->orderBy('created_at', 'desc')->get();
+	
 
 <a name="relationships"></a>
 ## Relationships
